@@ -1,0 +1,27 @@
+<h1>Stupid Coaching</h1>
+
+<div class="you">
+  <%=
+    @answer
+  %>
+  <h5>-You</h5>
+</div>
+<p></p>
+<div class="your-coach">
+  <%=
+    if @answer == 'I am going to work'
+      'Great!'
+    elsif @answer.include?('?')
+      'Silly question, get dressed and go to work!'
+    else
+      "I don't care, get dressed and go to work!"
+    end
+  %>
+  <h5>-Your Coach</h5>
+</div>
+
+<p></p>
+
+<div>
+  <button type="button" class="btn btn-primary"><%=link_to "Ask again!", "/ask"%></button>
+</div>
